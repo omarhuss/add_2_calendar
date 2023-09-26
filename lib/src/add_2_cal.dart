@@ -9,7 +9,7 @@ class Add2Calendar {
   /// Add an Event (object) to user's default calendar.
   static Future<bool> addEvent2Cal(Event event) async {
     return _channel
-        .invokeMethod<bool?>('add2Cal', event.toJson())
+        .invokeMethod<bool>('add2Cal', event.toJson())
         .then((value) => value ?? false);
   }
 }
